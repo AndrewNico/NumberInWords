@@ -120,7 +120,7 @@ namespace NumberInWords
         /// <param name="isFractionalPartEnabled">Отображать дробную часть или нет</param>
         public NumberInWordsRussianCurrency(decimal numberToTranslate, bool isFractionalPartEnabled)
         {
-            if (numberToTranslate < 0 || numberToTranslate > 999999999999.999m)
+            if (numberToTranslate < MIN_NUMBER || numberToTranslate > MAX_NUMBER)
                 throw new ArgumentOutOfRangeException(
                     String.Format("Допустимый диапазон чисел - от {0} до {1}", MIN_NUMBER, MAX_NUMBER));
 
